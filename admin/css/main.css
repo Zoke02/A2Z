@@ -68,7 +68,7 @@ img {
 }
 
 .main-color {
-	background: var(--main);
+	background: var(--accent);
 }
 .accent-color {
 	background: var(--accent);
@@ -623,5 +623,12 @@ input:-webkit-autofill {
 /* HIDE */
 
 .hide {
+	display: none;
+}
+
+.default-hide-user {
+	display: none;
+}
+.default-hide-categories {
 	display: none;
 }
