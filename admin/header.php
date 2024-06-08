@@ -74,31 +74,33 @@ include "functions.php";
                         </div>
                     </div>
                     <div class="default-hide-categories">
-                        <?php
-                        $categories = new Categories;
-                        $all_categories = $categories->all_categories();
-
-                        foreach ($all_categories as $categorie)
-                        {
-                            echo '<a href="jobscategorie.php?id='. $categorie->id . '" class="menu-user__line">' . $categorie->categorie_name . '</a>';
-                        }
-                        ?>
+                        <div class="menu-list">
+                            <?php
+                            $categories = new Categories;
+                            $all_categories = $categories->all_categories();
+                            foreach ($all_categories as $categorie)
+                            {
+                                echo '<a href="jobscategorie.php?id='. $categorie->id . '" class="menu-user__line">' . $categorie->categorie_name . '</a>';
+                            }
+                            ?>
+                        </div>
                     </div>
                     <?php if (isset($_SESSION["logged_in"])) { ?>
                         <div class="default-hide-user">
-                            <a class="menu-user__line" href="account.php">My Account</a>
-                            <a class="menu-user__line" href="jobsnew.php">Create New Job</a>
-                            <?php if (isset($_SESSION["admin"])){ ?>
-                            <a class="menu-user__line" href="jobsadmin.php">Jobs: Administration</a>
-                            <?php } else { ?>
-                            <a class="menu-user__line" href="jobsadmin.php">Jobs: <?php echo $_SESSION["firm"] ?></a>
-                            <?php } ?>
-                            <?php if (isset($_SESSION["admin"])){ ?>
-                            <a class="menu-user__line" href="categoriesadmin.php">Categories: Administration</a>
-                            <?php } ?>
-
-                            <a class="menu-user__line" href="jobsall.php">List of All-Jobs</a>
-                            <a class="menu-user__line" href="logout.php">Logout</a>
+                            <div class="menu-list">
+                                <a class="menu-user__line" href="account.php">My Account</a>
+                                <a class="menu-user__line" href="jobsnew.php">Create New Job</a>
+                                <?php if (isset($_SESSION["admin"])){ ?>
+                                <a class="menu-user__line" href="jobsadmin.php">Jobs: Administration</a>
+                                <?php } else { ?>
+                                <a class="menu-user__line" href="jobsadmin.php">Jobs: <?php echo $_SESSION["firm"] ?></a>
+                                <?php } ?>
+                                <?php if (isset($_SESSION["admin"])){ ?>
+                                <a class="menu-user__line" href="categoriesadmin.php">Categories: Administration</a>
+                                <?php } ?>
+                                <a class="menu-user__line" href="jobsall.php">List of All-Jobs</a>
+                                <a class="menu-user__line" href="logout.php">Logout</a>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
