@@ -17,6 +17,7 @@
 
 /* BLUE */
 :root {
+	/* --main: #7a226d; */
 	--main: #22577a;
 	--accent: #2e74a3;
 	--text: #eef5db;
@@ -176,6 +177,10 @@ h2 {
 
 h3 {
 	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.6rem;
 }
 
 p {
@@ -584,6 +589,45 @@ input:-webkit-autofill {
 	padding: 3rem 2rem;
 	border: 3px solid var(--text);
 	border-radius: 5px;
+}
+
+/* About me */
+
+.about-me {
+	padding: 2rem 2rem 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+.about-me__img {
+	border-radius: 20px;
+	max-width: 285px;
+}
+
+.about-me__box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 610px) {
+	.about-me {
+		flex-direction: row;
+		padding: 4rem 2rem;
+		align-items: flex-start;
+	}
+	.about-me__box {
+		padding-top: 4rem;
+		padding-right: 2rem;
+		align-items: flex-start;
+		text-align: start;
+	}
 }
 
 /* Footer */

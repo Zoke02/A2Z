@@ -55,6 +55,8 @@ if (!empty($_POST))
                                 >E-Mail:</label
                             >
                             <input
+                                autocomplete="on"
+                                id="email"
                                 class="form__input"
                                 type="text"
                                 class="email"
@@ -71,6 +73,7 @@ if (!empty($_POST))
                                 >Password:</label
                             >
                             <input
+                                id="password"
                                 class="form__input"
                                 type="password"
                                 class="password"

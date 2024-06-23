@@ -5,7 +5,7 @@
                         <div class="footer__div">
                             <ul class="footer__ul">
                                 <li>
-                                    <a class="no-anchor-color" href=""
+                                    <a class="no-anchor-color" href="aboutus.php"
                                         >About Us</a
                                     >
                                 </li>

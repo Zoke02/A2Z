@@ -59,18 +59,37 @@ var searchCardsSlideSpeed = 500;
 
 $(document).ready(function () {
 	$('#search-field').keyup(function () {
-		var input, cards;
-		input = $('#search-field').val().toUpperCase();
-		cards = $('.card');
+		var input = $('#search-field').val().toUpperCase();
+		var cards = $('.card');
 		cards.each(function () {
 			var card = $(this);
 			var cardTitle = card.find('.card__title');
 			var txtValue = cardTitle.text();
-			if (txtValue.toUpperCase().indexOf(input) > -1) {
+			var cardCategorie = card.find('.card__categorie');
+			var txtValueCategorie = cardCategorie.text();
+			if (
+				txtValue.toUpperCase().indexOf(input) > -1 ||
+				txtValueCategorie.toUpperCase().indexOf(input) > -1
+			) {
 				card.fadeIn(searchCardsSlideSpeed);
 			} else {
 				card.fadeOut(searchCardsSlideSpeed);
 			}
 		});
 	});
+});
+
+// About Me Slide.
+$(document).ready(function () {
+	if (top.location.pathname === '/A2Z/admin/aboutus.php') {
+		$(window).on('load', function () {
+			$('html').animate(
+				{
+					scrollTop: $('.about-me').parent().offset().top + 20,
+				},
+				300 // Speed
+			);
+		});
+		return false;
+	}
 });
