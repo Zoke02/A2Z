@@ -42,5 +42,4 @@ class MySql
         $result = $this->db->query($input);
         return $result;
     }
-
 }
