@@ -10,7 +10,7 @@
 3. **Move the Project into `htdocs`**
    - Copy the project folder into your XAMPP `htdocs` directory:
      ```
-     C:\xampp\htdocs\A2Z
+     C:\xampp\htdocs\JuniorWebDeveloper-Project\
      ```
 
 4. **Set Up the Database**
@@ -32,7 +32,7 @@
 6. **Access the Project**
    - In your browser, navigate to:
      ```
-     http://localhost/A2Z/
+     http://localhost/JuniorWebDeveloper-Project/
      ```
 
 ---
